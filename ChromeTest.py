@@ -2,7 +2,7 @@ import os
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
+import time
 
 
 class ChromeTest:
@@ -15,6 +15,7 @@ class ChromeTest:
 
         url = "http://www.saucedemo.com"
         driver.get(url)
+        time.sleep(6)
         print(driver.title)
         #username_id = "user-name"
         # user_element = driver.find_element_by_id(username_id)
