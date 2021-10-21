@@ -3,16 +3,15 @@ from selenium import webdriver
 
 
 from webdriver_manager.firefox import GeckoDriverManager
-driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+from selenium.webdriver.firefox.service import Service
+#driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 import time
 #changes made
 #from selenium.webdriver.chrome.service import Service
 #from webdriver_manager.chrome import ChromeDriverManager
-
-
 #driver=webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
-#s=Service(ChromeDriverManager().install())
-#driver = webdriver.Chrome(service=s)
+s=Service(GeckoDriverManager().install())
+driver = webdriver.Firefox(service=s)
 #changes made
 driver.get("https://www.saucedemo.com")
 time.sleep(2)
