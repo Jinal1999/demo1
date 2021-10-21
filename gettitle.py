@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-driver=webdriver.Chrome("C:/Users/146709/Downloads/chromedriver.exe")
+driver=webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
 driver.get("https://www.saucedemo.com")
 time.sleep(2)
 driver.maximize_window()
