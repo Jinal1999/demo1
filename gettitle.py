@@ -1,6 +1,13 @@
 from selenium import webdriver
+#changes made
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+#changes made
 import time
-driver=webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
+#driver=webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
+s=Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=s)
+#changes made
 driver.get("https://www.saucedemo.com")
 time.sleep(2)
 driver.maximize_window()
