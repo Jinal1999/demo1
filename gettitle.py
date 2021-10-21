@@ -1,15 +1,16 @@
 from selenium import webdriver
+import time
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.add_argument("--headless") 
 #changes made
-
-
 #from webdriver_manager.firefox import GeckoDriverManager
 #from selenium.webdriver.firefox.service import Service
 #driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
-import time
 #changes made
 #from selenium.webdriver.chrome.service import Service
 #from webdriver_manager.chrome import ChromeDriverManager
-driver=webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
+driver=webdriver.Chrome("/usr/lib/chromium-browser/chromedriver",options=chrome_options)
 #s=Service(GeckoDriverManager().install())
 #driver = webdriver.Firefox(service=s)
 #changes made
