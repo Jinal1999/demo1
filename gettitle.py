@@ -1,6 +1,6 @@
 from selenium import webdriver
 #changes made
-pip3 install webdriver-manager
+
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 #changes made
