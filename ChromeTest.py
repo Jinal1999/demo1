@@ -11,8 +11,8 @@ class ChromeTest:
         chrome_options.add_argument("--headless")
       # driverlocation = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
         # os.environ["webdriver.chrome.driver"] = driverlocation
-        driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver",options=chrome_options)
-
+        #driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver",options=chrome_options)
+        driver = webdriver.Chrome("/usr/bin/chromedriver",options=chrome_options)
         url = "http://www.saucedemo.com"
         driver.get(url)
         time.sleep(6)
